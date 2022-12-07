@@ -1,5 +1,5 @@
-# Night Of The Living Undead
-## Created by Jason Luc and Kyler Martinez
+# Final Project: Night Of The Living Undead
+## Team 9: Jason Luc and Kyler Martinez
 
 ### *Code Organization*
 1. HDL
@@ -12,7 +12,7 @@
 3. Audio Drivers 
 4. Music
 5. Sprite Cores
-6. Spirte Drivers
+6. Sprite Drivers
 7. Game Characters
 8. Display
 9. Application Overview
@@ -21,17 +21,17 @@
 <br>  
 
 ### Introduction
-We made a zombie shooter last stand top down cool griddy filled game. (Change this lol)
+The scope of this project is to implement a zombie-themed horde shooting arcade game using the Nexys A7 FPGA development board and the Microblaze soft core processor. The game uses the Nexys A7's PWM audio output, 12-bit VGA output, and a HID-compatible mouse for audio-visual user interaction. 
 
 <br>  
 
 ### Audio Cores
-The audio cores used in the project are based on the ones devloped by (INSERT NAME) Chu and were provided by the textbook (INSERT THE NAME KYLER) but have been modifed to suit the needs of the project. Orignally the cores were set to produce sounds based on a sine wave. This has been altered to support four possible signals, a sine wave, a sawtooth wave, a random (noise) wave, and a square wave. The DFFS audio core outputs one of these signals to the ADSR core and a register control which signal is to be used. The user can write to this register to change which audio source they wish to use.
+The audio cores used in the project are based on the ones devloped by Dr. Pong Chu and were provided by the textbook *”FPGA Prototyping by SystemVerilog Examples: Xilinx MicroBlaze MCS SoC Edition”, 2nd Edition*, but have been modifed to suit the needs of the project. Orignally the cores were set to produce sounds based on a sine wave. This has been altered to support four possible signals, a sine wave, a sawtooth wave, a random (noise) wave, and a square wave. The DFFS audio core outputs one of these signals to the ADSR core and a register control which signal is to be used. The user can write to this register to change which audio source they wish to use.
 
 <br>  
 
 ### Audio Driver
-The DDFS and ADSR cores are controlled by the appropiate drivers. The original drivers were devloped by (THE AUTHOR) but have been modified. The DDFS has been modified to allow the programer to change which audio source has been selected to output music. The ADSR driver has been modified to include functions to play notes that return a boolean that indictates whether the note is finished. A version of this function is implemented to accept a *Sound* object as an input.
+The DDFS and ADSR cores are controlled by the appropiate drivers. The original drivers were devloped by Dr. Chu but have been modified. The DDFS has been modified to allow the programer to change which audio source has been selected to output music. The ADSR driver has been modified to include functions to play notes that return a boolean that indictates whether the note is finished. A version of this function is implemented to accept a *Sound* object as an input.
 
 <br>
 
@@ -49,15 +49,22 @@ The four primary methods are:
 *  *stopMusic* : stop the playing of the song. Pause or clear the Jukebox if the user chooses to.
 *  *resumeMusic* : resume the song from a pause.
   
+
 <br>
 
 ### Sprite Core
-Words
+The SpriteCore existed in the original code developed by Dr. Chu, and was modified for the purposes of this project. A total of 4 sprites are used, 2 for the zombie entities, 1 for the player, and 1 for the custom mouse crosshair. While the mouse sprite is static and is mapped in hex, the other three sprites are palette-encoded and include four frames of animation. For a 32x32 sprite with 3-bit encoding for the pallete, four frames is the extent of the 12-bit address given to each sprite in the HDL. Sprites are updated by writing to a 5-bit control register that determines a chromakeyed color, animation playback, and current displayed animation frame.
 
 <br>
 
 ### Sprite Driver
-Words
+The modifications to the SpriteCore class in the overall VGA driver include several additional methods:
+*  *moveDir* : moves sprite with a given horizontal and vertical speed.
+*  *stop* : halts all sprite movement.
+*  *get_start* : spawns a sprite along a random side of the screen, and tells it to move to a random position across the screen. 
+*  *collide* : returns a boolean if the sprite collides with a given position.
+*  *changeColor* : changes the color of the palette-encoded sprite.
+*  *changeSprite* : changes the frame of sprite animation.
 
 <br>
 
@@ -72,7 +79,7 @@ Words
 
 ### Display
 #### Background
-The background is generated using the FrameCore and having the processor write pixel values to the screen. Due to the size of memory, we could not load a pre-designed background, we had to design one that could be drawn using as little memory as possible. The bacground starts by filling it with the color green to present grass and then tombstones are drawn in various locations across the screen. Addiitonally random black pixels are drawn to represent text. A similiar process can be applied to display other objects.
+Words
 <br>
 #### On Screen Display (OSD)
 The OSD is based on the code by Chu but has been modified to add functions to make string and variable display more convient for the application. Two write functions were devloped to display strings and numbers. The number version of the method returns the number of digits printed to allow for numbers to easily display in line with other text.
@@ -92,7 +99,6 @@ The application is broken into various stages:
     1. Bad Ending - Player did not kill more than 25 zombies.
     2. Good Ending - Player killed 25 or more zombies.
     3. True Ending - Player killed 50 zombies without taking damage.
-    4. Last Stand Ending - Player killed 25 or more zombies in last stand mode.
 <br>
 
 ### Gameplay
@@ -100,17 +106,5 @@ Words
 <br>
 
 ### Demo
-A video link will soon be found here: TBA
+Words
 <br>
-
-Below are pictures taken of our game. 
-<br>
-<p align = "center">
- <img height = "350" src = "Pictures/TitleScreen.jpg"> 
- </p>  
- Title Screen
-<br>
-<p align = "center">
- <img height = "350" src = "Pictures/GameplayLoop.jpg"> 
- </p>  
- Gameplay
