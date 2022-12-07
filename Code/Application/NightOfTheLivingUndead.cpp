@@ -1,9 +1,9 @@
 /*****************************************************************//**
- * @file main_video_test.cpp
+ * @file NightOfTheLivingUndead.cpp
  *
- * @brief Basic test of 4 basic i/o cores
+ * @brief Night of the Living Undead Game
  *
- * @author p chu
+ * @author p chu, Jason Loc, Kyler Martinez
  * @version v1.0: initial release
  *********************************************************************/
 
@@ -203,7 +203,7 @@ void true_win(OsdCore *osd_p, int score)
 	osd_p->bypass(0);
 	osd_p->set_color(0x0ff, 0x000); // dark gray/green
 
-	char lines[6][40] = { "HE KILLED UNTIL IT WAS DONE.", "NO UNDEAD COULD STOP HIM.", "BULLET CASINGS LITTERED THE GROUND.",
+	char lines[6][40] = { "HE KILLED UNTIL IT WAS DONE.", "NO UNDEAD COULD STOP HIM.", "EMPTY SHELLS LITTERED THE GROUND.",
 			"NONE WERE PREPARED TO FACE", "THE MIGHT OF THE SLAYER.", "HE REIGNS SUPREME."};
 
 	for (int i = 0; i < 6; i++)
