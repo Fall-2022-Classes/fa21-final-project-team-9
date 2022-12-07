@@ -100,5 +100,15 @@ Words
 <br>
 
 ### Demo
-Words
+A video link will soon be found here: TBA
 <br>
+
+Below are pictures taken of our game. Specifically the title screen, and image from standard game play.
+<br>
+<p align = "center">
+ <img height = "350" src = "Pictures/TitleScreen.jpg"> 
+ </p>  
+<br>
+<p align = "center">
+ <img height = "350" src = "Pictures/GameplayLoop.jpg"> 
+ </p>  
