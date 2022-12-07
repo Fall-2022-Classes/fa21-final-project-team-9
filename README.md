@@ -1,4 +1,4 @@
-# Final Project: Night Of The Living Undead
+# Night Of The Living Undead
 ## Team 9: Jason Luc and Kyler Martinez
 
 ### *Code Organization*
@@ -107,7 +107,7 @@ The player spawns with 3 lives, and 6 ammunition. Pressing the left button on th
 <br>
 
 ### Demo
-A video link will soon be found here: TBA
+A video link will soon be found here: [Night of the Living Undead](https://youtu.be/jJO6eetypRA)
 <br>
 
 Below are pictures taken of our game. 
