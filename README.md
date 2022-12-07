@@ -70,10 +70,10 @@ The modifications to the SpriteCore class in the overall VGA driver include seve
 
 ### Game Characters
 #### Zomboid
-Words
+The Zomboid class, derived from SpriteCore, is used to control the zombie enemies of the game. Each zombie spawns with 1 of 4 random colors and is animated with a walk cycle facing the direction of travel. Methods for detecting player and mouse collision are also found in the class. Only two zombies can be present on the screen at any given time. The speed of either zombie instance can be modified in the main code.
 <br>
 #### Player
-Words
+The Player class controls the player animation frame for the direction the player is facing relative to the mouse crosshair. The ammunition count, number of lives, and damaged player visual effect are handled in the main application code.
 
 <br>
 
@@ -103,7 +103,7 @@ The application is broken into various stages:
 <br>
 
 ### Gameplay
-Words
+The player spawns with 3 lives, and 6 ammunition. Pressing the left button on the mouse consumes 1 ammunition, and plays a hit or miss noise depending on if a zombie is within the crosshair. Zombies gain speed once they reach one of the center axes of the screen, and gradually get faster as the player kills more zombies and the difficulty increases. Reloading the ammunition requires a right button input with a short delay following.
 <br>
 
 ### Demo
