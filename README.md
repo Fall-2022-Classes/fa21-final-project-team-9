@@ -1,5 +1,5 @@
-# Final Project: Night Of The Living Undead
-## Team 9: Jason Luc and Kyler Martinez
+# Night Of The Living Undead
+## Created by Jason Luc and Kyler Martinez
 
 ### *Code Organization*
 1. HDL
@@ -49,7 +49,6 @@ The four primary methods are:
 *  *stopMusic* : stop the playing of the song. Pause or clear the Jukebox if the user chooses to.
 *  *resumeMusic* : resume the song from a pause.
   
-
 <br>
 
 ### Sprite Core
@@ -73,7 +72,7 @@ Words
 
 ### Display
 #### Background
-Words
+The background is generated using the FrameCore and having the processor write pixel values to the screen. Due to the size of memory, we could not load a pre-designed background, we had to design one that could be drawn using as little memory as possible. The bacground starts by filling it with the color green to present grass and then tombstones are drawn in various locations across the screen. Addiitonally random black pixels are drawn to represent text. A similiar process can be applied to display other objects.
 <br>
 #### On Screen Display (OSD)
 The OSD is based on the code by Chu but has been modified to add functions to make string and variable display more convient for the application. Two write functions were devloped to display strings and numbers. The number version of the method returns the number of digits printed to allow for numbers to easily display in line with other text.
@@ -93,6 +92,7 @@ The application is broken into various stages:
     1. Bad Ending - Player did not kill more than 25 zombies.
     2. Good Ending - Player killed 25 or more zombies.
     3. True Ending - Player killed 50 zombies without taking damage.
+    4. Last Stand Ending - Player killed 25 or more zombies in last stand mode.
 <br>
 
 ### Gameplay
