@@ -33,9 +33,24 @@ The audio cores used in the project are based on the ones devloped by (INSERT NA
 ### Audio Driver
 The DDFS and ADSR cores are controlled by the appropiate drivers. The original drivers were devloped by (THE AUTHOR) but have been modified. The DDFS has been modified to allow the programer to change which audio source has been selected to output music. The ADSR driver has been modified to include functions to play notes that return a boolean that indictates whether the note is finished. A version of this function is implemented to accept a *Sound* object as an input.
 
+<br>
+
+### Music
+#### Sound Class
+The sound class is an object that stores the note of the sound, the octave the note is in, the duration of the note, and the audio source of the note.
 
 <br>  
+
+#### Jukebox Class
+The Jukebox class is the primary class used to control the music in the game. The class contains the melodies for music sequences such as the title theme, game over theme, and the various sound effects used. There are defintions for the different sound effects and songs avalible to be used.
 <br>  
-<br>  
+
+The four primary methods are:
+*  *changeSong* : set the Jukebox to play the supplied song.
+*  *playSong* : play the current song loaded and return whether it is done. If the user wants to loop, restart the song.
+*  *stopMusic* : stop the playing of the song. Pause or clear the Jukebox if the user chooses to.
+*  *resumeMusic* : resume the song from a pause.
+  
+
 <br>
 
