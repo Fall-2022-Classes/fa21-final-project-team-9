@@ -38,12 +38,10 @@ The DDFS and ADSR cores are controlled by the appropiate drivers. The original d
 ### Music
 #### Sound Class
 The sound class is an object that stores the note of the sound, the octave the note is in, the duration of the note, and the audio source of the note.
-
 <br>  
-
 #### Jukebox Class
 The Jukebox class is the primary class used to control the music in the game. The class contains the melodies for music sequences such as the title theme, game over theme, and the various sound effects used. There are defintions for the different sound effects and songs avalible to be used.
-<br>  
+<br>
 
 The four primary methods are:
 *  *changeSong* : set the Jukebox to play the supplied song.
@@ -67,7 +65,7 @@ Words
 ### Game Characters
 #### Zomboid
 Words
-
+<br>
 #### Player
 Words
 
@@ -76,9 +74,9 @@ Words
 ### Display
 #### Background
 Words
-
-#### On Screen Display
-Words
+<br>
+#### On Screen Display (OSD)
+The OSD is based on the code by Chu but has been modified to add functions to make string and variable display more convient for the application. Two write functions were devloped to display strings and numbers. The number version of the method returns the number of digits printed to allow for numbers to easily display in line with other text.
 
 <br>
 
@@ -98,7 +96,9 @@ The application is broken into various stages:
 <br>
 
 ### Gameplay
+Words
 <br>
 
 ### Demo
+Words
 <br>
