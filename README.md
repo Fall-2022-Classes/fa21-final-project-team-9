@@ -13,8 +13,8 @@
 4. Music
 5. Sprite Cores
 6. Spirte Drivers
-7. Zomboids
-8. Player
+7. Game Characters
+8. Display
 9. Application Overview
 10. Gamplay
 11. Demo
@@ -54,3 +54,39 @@ The four primary methods are:
 
 <br>
 
+### Sprite Core
+Words
+
+<br>
+
+### Sprite Driver
+Words
+
+<br>
+
+### Game Characters
+#### Zomboid
+Words
+
+#### Player
+Words
+
+<br>
+
+### Display
+#### Background
+Words
+
+#### On Screen Display
+Words
+
+<br>
+
+### Application Overview
+<br>
+
+### Gameplay
+<br>
+
+### Demo
+<br>
