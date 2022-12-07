@@ -83,6 +83,18 @@ Words
 <br>
 
 ### Application Overview
+The application is broken into various stages:
+1. Start Screen - Display start screen, play music, and wait for user input.
+2. Story Screen - Display story screen, play music, and wait for user input. Set last stand mode if user enables.
+3. Gameplay Loop - User plays the game until a stop condition appears.
+    1. Mouse Handler - Get mouse position, check for collisions with enemies.
+    2. Reload Handler - Check if the user has finished reloading the gun.
+    3. Enemy Handler - Move the enemy, check if speed needs to be changed, update sprite (animate), and check if they each center.
+    4. Player Handler - Update player sprite depending on mouse location and update color if the player is attacked.
+5. Game Over Screen - Display the screen based on the ending the player earned.
+    1. Bad Ending - Player did not kill more than 25 zombies.
+    2. Good Ending - Player killed 25 or more zombies.
+    3. True Ending - Player killed 50 zombies without taking damage.
 <br>
 
 ### Gameplay
