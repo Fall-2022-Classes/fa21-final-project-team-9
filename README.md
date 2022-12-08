@@ -120,4 +120,4 @@ Below are pictures taken of our game.
 <p align = "center">
  <img height = "350" src = "Pictures/GameplayLoop.jpg"> 
  </p>  
- Gameplay
+ 
