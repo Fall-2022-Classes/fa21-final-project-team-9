@@ -16,7 +16,7 @@
 7. Game Characters
 8. Display
 9. Application Overview
-10. Gamplay
+10. Gameplay
 11. Demo
 <br>  
 
